@@ -14,7 +14,7 @@ angular.module('angularRedditApp')
 
       success(function(data, status, headers, config) {
         $scope.topics = data.data.children;
-        console.log(data);
+        // console.log(data);
       }).
       error(function(data, status, headers, config) {
         // log error
@@ -40,18 +40,18 @@ angular.module('angularRedditApp')
 
         // push new values to ls
         return localStorageService.set('visited', JSON.stringify(ls));
-        
+
 
       };
   })
   .controller('recentlyVisited', function($scope, localStorageService){
     var ls = JSON.parse(localStorageService.get('visited'));
     // if we have more than 5 elements we return the last 5
-    if (ls.length > 5){
-      $scope.links = ls.slice(Math.max(ls.length - 5, 1));
-    }
-    else{
-      $scope.links = ls;
-    }
+    // if (ls.length > 5){
+    //   $scope.links = ls.slice(Math.max(ls.length - 5, 1));
+    // }
+    // else{
+    //   $scope.links = ls;
+    // }
 
   });
