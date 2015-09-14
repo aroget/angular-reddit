@@ -1,0 +1,15 @@
+<div class="row">
+  <ul class="col-md-12">
+    <li class="col-md-6" ng-repeat="topic in topics | filter:query">
+      <a href=#{{topic.data.url}} ng-click=saveToStore(topic)>
+        <h3>
+          {{ topic.data.title }}
+        </h3>
+        <span class="users">Readers</span>
+        <span class="subscribers">{{ topic.data.subscribers | number:0 }}</span>
+        <!-- <p>{{ topic.data.public_description | limitTo : 120 }}</p> -->
+      </a>
+    </li>
+  </ul>
+</div>
+<!-- <button ng-click="loadMore()">Load More Topics</button> -->

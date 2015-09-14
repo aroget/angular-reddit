@@ -1,0 +1,17 @@
+<div class="breadcrumb">
+  <a href="#/">Feed</a>
+  <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+  <span class="category-name">{{name}}</span>
+</div>
+
+<ul class="col-md-12">
+  <li class="col-md-6" ng-repeat="article in articles | filter:query">
+    <a href={{article.data.url}} target="_blank">
+      <h3>{{ article.data.title | limitTo: 45 }}...</h3>
+
+      <span class="users">Score</span>
+      <span class="subscribers">{{ article.data.score  }}</span>
+      <p class="date" >{{ article.data.created * 1000 | date}}</p>
+    </a>
+  </li>
+</ul>

@@ -1,0 +1,21 @@
+// https://coolors.co/app/545454-69747c-6baa75-84dd63-cbff4d
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  color:$c-med;
+}
+
+a{
+  text-decoration:none;
+  color:$c-light;
+
+  &:hover{
+    text-decoration:none;
+    color:$c-hover;
+  }
+}
+
+ul{
+  list-style:none;
+  padding-left:0;
+}

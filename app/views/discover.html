@@ -1,0 +1,16 @@
+<h1>Here</h1>
+<div class="row">
+  <ul class="col-md-12">
+    <li class="col-md-6" ng-repeat="topic in topics | filter:query">
+      <a href={{topic.data.url}} target="_blank">
+        <h3>
+          {{ topic.data.title | limitTo: 75 }}...
+        </h3>
+        <span class="users">Score</span>
+        <span class="subscribers">{{ topic.data.score  }}</span>
+        <!-- <p>{{ topic.data.public_description | limitTo : 120 }}</p> -->
+      </a>
+    </li>
+  </ul>
+</div>
+<!-- <button ng-click="loadMore()">Load More Topics</button> -->

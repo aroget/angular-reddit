@@ -1,0 +1,46 @@
+.main-content{
+  height: 100%;
+  overflow: scroll;
+  background:#fafafa;
+  // padding:0 50px;
+
+  ul{
+    padding-left:0;
+    li{
+      height:200px;
+      padding:50px;
+      background:#fafafa;
+      border-right: 5px solid #f4f4f4;
+      border-bottom: 5px solid #f4f4f4;
+
+      &:nth-child(2n){
+        border-right:none;
+      }
+
+      &:hover{
+        background:#fff;
+      }
+      a{
+        color:$c-med;
+      }
+      h3{
+        text-transform:uppercase;
+        font-weight:400;
+        color:$c-light;
+        font-size:18px;
+        margin-bottom:25px;
+      }
+      .users{
+        font-size:15px;
+        text-transform:uppercase;
+        border-right:2px solid $c-med;
+        padding-right:10px;
+      }
+      .subscribers{
+        font-size:15px;
+        padding-left:10px;
+        color:$c-bg;
+      }
+    }
+  }
+}
